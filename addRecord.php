@@ -5,6 +5,25 @@ foreach ($_POST as $key->$value){
 $a=$key;
 $$a=$value;
 }
+//connect to database
+$server="localhost";
+$pass="";
+$user="root";
+$db="MedicaRec";
+try{
+$con=new PDO($server,$db,$user,$pass);
+}
+catch (PDOException $e){
+die($e);
+}
+//display data filter <18 years old
+$req="select * from patient where age <18";
+$do=$con->query($req);
+$res=$do->fetchAll();
+foreach($res as $row){
+echo "<td><tr>$row['firstname]</tr></td><td>";
+//Continue fetching other reliable data
+}
 ?>
 <HTML lang="en" enctype="multitype_form_data">
 <head>
