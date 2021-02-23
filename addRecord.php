@@ -42,7 +42,7 @@ echo "<td><tr>$row['firstname]</tr></td><td>";
 <option value=name="..."> Other</option>
 
 </select>
-<input type="submit" name="save" value="save">
+<input type="submit" name="save" value="save" o'clock="checkvalues()">
 <table>
 <th> List of records
 <td><tr></tr></td>
@@ -55,7 +55,12 @@ echo "<td><tr>$row['firstname]</tr></td><td>";
 if(isset ($_POST['save'])){
 $req=$con->query("insert into patient () values('$fn','$ln','$gd','$age','$country','$ct')");
 $insert=$con->exec($req);
-
+if($insert) echo "<script>
+Medical record added successfully
+</script>"
+else echo "<script>
+Medical record has not been added. Please, try again
+</script>"
 }
 
  ?>
