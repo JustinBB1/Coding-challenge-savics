@@ -25,7 +25,7 @@ echo "<td><tr>$row['firstname]</tr></td><td>";
 //Continue fetching other reliable data
 }
 ?>
-<HTML lang="en" enctype="multitype_form_data">
+<HTML lang="en" enctype="multi_form_data">
 <head>
 <title>coding challenge</title>
 <form method="post" action="">
