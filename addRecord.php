@@ -11,7 +11,7 @@ $pass="";
 $user="root";
 $db="MedicaRec";
 try{
-$con=new PDO($server,$db,$user,$pass);
+$con=new PDO("mysql=host=$server;dbname=$db,$user,$pass");
 }
 catch (PDOException $e){
 die($e);
